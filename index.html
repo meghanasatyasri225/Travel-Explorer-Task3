@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Travel Explorer</h1>
+        <p>Discover Beautiful Places Around the World</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#planner">Planner</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to My Travel Blog</h2>
+        <p>
+            Explore amazing destinations, travel experiences,
+            and useful tips for your next adventure.
+        </p>
+    </section>
+
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="cards">
+        <div class="card">
+            <img src="beach.jpg" alt="Beach">
+            <h3>Maldives</h3>
+            <p>
+                Enjoy crystal-clear waters, white sandy beaches,
+                and luxury resorts.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="bali.jpg" alt="Bali">
+            <h3>Bali, Indonesia</h3>
+            <p>Famous for beaches, temples, culture, and tropical scenery.</p>
+        </div>
+
+        <div class="card">
+            <img src="goa.jpg" alt="Goa">
+            <h3>Goa, India</h3>
+            <p>Known for sandy beaches, nightlife, and water sports.</p>
+        </div>
+
+        <div class="card">
+            <img src="mountains.jpg" alt="Mountains">
+            <h3>Switzerland</h3>
+            <p>
+                Experience breathtaking mountain views and
+                beautiful landscapes.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="kashmir.jpg" alt="Kashmir">
+            <h3>Kashmir, India</h3>
+            <p>Often called paradise on earth because of its natural beauty.</p>
+        </div>
+
+        <div class="card">
+            <img src="city.jpg" alt="City">
+            <h3>Paris</h3>
+            <p>
+                Discover the city of love, famous landmarks,
+                and rich culture.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="dubai.jpg" alt="Dubai">
+            <h3>Dubai, UAE</h3>
+            <p>Explore modern architecture, shopping, and luxury attractions.</p>
+        </div>
+
+        <div class="card">
+            <img src="kerala.jpg" alt="Kerala">
+            <h3>Kerala, India</h3>
+            <p>Enjoy backwaters, hill stations, and beautiful greenery.</p>
+        </div>
+
+        <div class="card">
+            <img src="ladakh.jpg" alt="Ladakh">
+            <h3>Leh-Ladakh, India</h3>
+            <p>A perfect destination for adventure lovers and bike riders.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="button-section">
+        <button onclick="showMessage()">
+            Start Your Journey
+        </button>
+    </section>
+  
+    <section id="planner">
+
+        <h2>✈ Travel Planner</h2>
+        <p>
+            Manage your travel preparation tasks. Add new tasks
+            or remove completed ones from your checklist.
+        </p>
+        <div class="planner">
+            <input type="text" id="taskInput" placeholder="Enter travel task">
+            <button onclick="addTask()">Add Task</button>
+
+            <ul id="taskList">
+                <li>Book Flight <button onclick="removeTask(this)">X</button></li>
+                <li>Reserve Hotel <button onclick="removeTask(this)">X</button></li>
+                <li>Carry Passport <button onclick="removeTask(this)">X</button></li>
+                <li>Apply for Visa<button onclick="removeTask(this)">X</button></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery">
+    <h2>Travel Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-track">
+                <img src="goa1.jpg" alt="Goa">
+                <img src="paris1.jpg" alt="Paris">
+                <img src="switzerland.jpg" alt="Switzerland">
+                <img src="maldives.jpg" alt="Maldives">
+                <img src="kashmir.jpg" alt="Kashmir">
+                <img src="dubai.jpg" alt="Dubai">
+            </div>
+        </div>
+        <div class="gallery-buttons">
+            <button onclick="prevSlide()">❮ Previous</button>
+            <button onclick="nextSlide()">Next ❯</button>
+        </div>
+    </section>
+
+    <section id="weather">
+        <h2>Check Weather</h2>
+
+        <input type="text" id="city" placeholder="Enter city name">
+
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div id="weatherResult"></div>
+    </section>
+
+    <section id="quiz">
+    <h2>Travel Quiz</h2>
+
+    <div class="quiz-box">
+        <h3 id="question"></h3>
+
+        <div id="options"></div>
+
+        <p id="message"></p>
+
+        <button id="nextBtn">Next</button>
+
+        <p id="score"></p>
+    </div>
+</section>
+
+<section id="joke-section">
+    <h2>Travel Fun Corner 😄</h2>
+
+    <button onclick="getJoke()">
+        Get Fun Fact
+    </button>
+
+    <div id="joke"></div>
+</section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button onclick="validateForm()">Submit</button>
+        </div>
+    </section>
+
+    <section id="tips">
+        <h2>Travel Tips</h2>
+        <ul>
+            <li>Plan your itinerary in advance.</li>
+            <li>Carry important documents safely.</li>
+            <li>Keep a first-aid kit while traveling.</li>
+            <li>Always respect local culture and traditions.</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>© 2026 Travel Explorer Blog Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
